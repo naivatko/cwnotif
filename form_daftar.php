@@ -14,33 +14,27 @@ if(isset($_SESSION['username'])){
 	<script type="text/javascript" src="javascript/form.daftar.handler.js"></script>
 </head>
 <body>
-	<div id="wrapper">
-		<div id="box-daftar">
+	<div class="container">
+		<div class="row col-sm-3">
 			<form method="post" action="modules/get_data.php" id="form-daftar">
-				<label>Username</label>
-				<br/>
-				<input type="text" name="username" placeholder="username cwnotif" maxlength="10" id="username">
-				<br/>
-				<label>Password:</label>
-				<br/>
-				<input type="password" name="password" placeholder="********" maxlength="10" id="password">
-				<br/>
-				<label>Konfirmasi Password</label>
-				<br/>
-				<input type="password" name="repassword" placeholder="********" maxlength="10" id="repassword">
-				<br/>
-				<label>IGN</label>
-				<br/>
-				<input type="text" name="ign" placeholder="IGN" class="required" maxlength="24" id="ign">
-				<br/>
-				<br/>
-				<input type="submit" name="submit" value="Daftar" id="button">
-				<br/>
-	 		</form>
-		</div>
-		<div id="to-login">
-			<form method="" action="form_login.php">
-				<input type="submit" name="" value="Ke Halaman Login" id="to-login-button">
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input class="form-control" type="text" name="username" placeholder="username cwnotif" maxlength="10" id="username">
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input class="form-control" type="password" name="password" placeholder="********" maxlength="10" id="password">
+				</div>
+				<div class="form-group">
+					<label for="repassword">Konfirmasi Password</label>
+					<input class="form-control" type="password" name="repassword" placeholder="********" maxlength="10" id="repassword">
+				</div>
+				<div class="form-group">
+					<label for="ign">IGN</label>
+					<input class="form-control" type="text" name="ign" placeholder="IGN" class="required" maxlength="24" id="ign">
+				</div>
+				<button type="submit" name="submit" id="button" class="btn btn-default btn-block">Daftar</button>
+				<a href="form_login.php" class="btn btn-default btn-block">Ke Halaman Login</a>
 			</form>
 		</div>
 	</div>

@@ -22,8 +22,8 @@
 				<label for="password">Password:</label>
 				<input type="password" class="form-control" id="password" placeholder="********" name="password" maxlength="10">
 			</div>
-			<button type="submit" class="btn btn-default btn-block" name="submit">login</button>
-			<a href="form/daftar.php" class="btn btn-default btn-block" id="ke-form-daftar">Daftar</a>
+			<button type="submit" class="btn btn-default btn-block" name="submit">Login</button>
+			<a href="form_daftar.php" class="btn btn-default btn-block" id="ke-form-daftar">Daftar</a>
 		</form>
 		<p class="text-center" id="error-message">username atau password yang anda masukkan salah atau belum terdaftar<p>
 	</div>
