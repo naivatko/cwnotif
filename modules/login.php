@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
 		// Membangun koneksi ke database
 		require("connect.php");
-
+		echo "halo";
 		// Mencegah MySQL injection
 		$username = stripslashes($username);
 		$password = stripslashes($password);

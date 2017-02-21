@@ -11,24 +11,20 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-	<div id="wrapper">
-		<div id="box-login">
-			<form method="post" action="modules/login.php">
-				<label>Username</label>
-				<br/>
-				<input type="text" name="username" placeholder="username cwnotif" maxlength="10">
-				<br/>
-				<label>Password</label>
-				<br/>
-				<input type="password" name="password" placeholder="********" maxlength="10">
-				<br/>
-				<br/>
-				<input type="submit" name="submit" value="Login" class="button">
-				<br>
-	 		</form>
-	 		<form method="" action="form_daftar.php">
-	 			<input type="submit" name="submit2" value="Daftar" class="button2">
-	 		</form>
-		</div>
+<div class="container">
+	<div class="row col-sm-3">
+		<form method="post" action="modules/login.php">
+			<div class="form-group">
+				<label for="username">Username:</label>
+				<input type="text" class="form-control" id="username" placeholder="Username cwnotif" name="username" maxlength="10">
+			</div>
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="password" class="form-control" id="password" placeholder="********" name="password" maxlength="10">
+			</div>
+			<button type="submit" class="btn btn-default btn-block" name="submit">login</button>
+			<a href="form/daftar.php" class="btn btn-default btn-block" id="ke-form-daftar">Daftar</a>
+		</form>
 	</div>
+</div>
 </body>
