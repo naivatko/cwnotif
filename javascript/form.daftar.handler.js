@@ -9,13 +9,13 @@ $.validator.addMethod("ignRule", function(value, element) {
     }, "Gunakan format IGN sesuai aturan WG");
 
 $("#form-daftar").validate({
-    rules:{ 
+    rules:{
             username:{required: true, alphanumeric: true, minlength: 5},
-            password:{required: true, alphanumeric: true, minlength: 5},      
+            password:{required: true, alphanumeric: true, minlength: 5},
             repassword:{required: true, alphanumeric: true, equalTo:"#password", minlength: 5},
             ign:{required: true, ignRule: true, minlength: 3}
           },
-    messages:{ 
+    messages:{
             username: {
                 required:'Username tidak boleh kosong',
                 minlength:'Username minimal 5 karakter'},
@@ -30,8 +30,7 @@ $("#form-daftar").validate({
                 required:'IGN tidak boleh kosong',
                 minlength:'Masukkan minimal 3 karakter'}
             },
-
-     success: function(label) {
+    success: function(label) {
         label.text('OK!').addClass('valid');}
     });
 });
