@@ -21,11 +21,16 @@ if($_SESSION['svc_status'] == 0) {
 <html>
 	<head>
 	  <title>cwnotif</title>
-	  <link href="style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	  <link href="css/dashboard.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="javascript/jquery.min.js"></script>
 	</head>
 <body>
 <header>
-	<h3>Selamat Datang! <?php echo $username; ?></h3>
+	<nav id="nav-all">
+		<h1 id="welcome" class="row col-sm-6 vertical-align">Selamat Datang! <?php echo $username; ?></h1>
+		<a href="modules/logout.php" id="logout" class="btn btn-default">Logout</a>
+	</nav>
 </header>
 
 </body>

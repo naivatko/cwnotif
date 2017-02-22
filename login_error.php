@@ -9,6 +9,7 @@
 <head>
 	<title>cwnotif</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
 </head>
 <body>
 <div class="container">
@@ -25,7 +26,7 @@
 			<button type="submit" class="btn btn-default btn-block" name="submit">Login</button>
 			<a href="form_daftar.php" class="btn btn-default btn-block" id="ke-form-daftar">Daftar</a>
 		</form>
-		<p class="text-center" id="error-message">username atau password yang anda masukkan salah atau belum terdaftar<p>
+		<p class="error text-center" id="error-message">username atau password yang anda masukkan salah atau belum terdaftar<p>
 	</div>
 </div>
 </body>

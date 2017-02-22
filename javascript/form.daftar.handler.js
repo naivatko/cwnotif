@@ -30,6 +30,7 @@ $("#form-daftar").validate({
                 required:'IGN tidak boleh kosong',
                 minlength:'Masukkan minimal 3 karakter'}
             },
+            
     success: function(label) {
         label.text('OK!').addClass('valid');}
     });

@@ -9,6 +9,7 @@ if(isset($_SESSION['username'])){
 <head>
 	<title>cwnotif</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
 	<script type="text/javascript" src="javascript/jquery.min.js"></script>
 	<script type="text/javascript" src="javascript/core.js"></script>
 	<script type="text/javascript" src="javascript/form.daftar.handler.js"></script>
@@ -19,7 +20,7 @@ if(isset($_SESSION['username'])){
 			<form method="post" action="modules/get_data.php" id="form-daftar">
 				<div class="form-group">
 					<label for="username">Username</label>
-					<input class="form-control" type="text" name="username" placeholder="username cwnotif" maxlength="10" id="username" data-toggle="tooltip" data-placement="right">
+					<input class="form-control" type="text" name="username" placeholder="username cwnotif" maxlength="10" id="username">
 				</div>
 				<div class="form-group">
 					<label for="password">Password:</label>
