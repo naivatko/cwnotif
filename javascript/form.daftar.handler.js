@@ -1,12 +1,26 @@
 $(document).ready(function() {
 
 $.validator.addMethod("alphanumeric", function(value, element) {
-        return this.optional(element) || /^[a-z0-9]+$/i.test(value);
-    }, "Username hanya boleh huruf atau angka saja");
+          return this.optional(element) || /^[a-z0-9]+$/i.test(value);
+      }, "Username hanya boleh huruf atau angka saja");
 
 $.validator.addMethod("ignRule", function(value, element) {
-        return this.optional(element) || /^[a-z0-9_]+$/i.test(value);
-    }, "Gunakan format IGN sesuai aturan WG");
+          return this.optional(element) || /^[a-z0-9_]+$/i.test(value);
+      }, "Gunakan format IGN sesuai aturan WG");
+
+/*$.validator.setDefaults({
+  errorClass: 'help-block',
+  highlight: function(element){
+      $(element)
+        .closest('.form-group')
+        .addClass('has-error');
+      },
+  unhighlight: function(element){
+      $(element)
+        .closest('.form-group')
+        .removeClass('has-error');
+      }
+  });*/
 
 $("#form-daftar").validate({
     rules:{
@@ -30,8 +44,14 @@ $("#form-daftar").validate({
                 required:'IGN tidak boleh kosong',
                 minlength:'Masukkan minimal 3 karakter'}
             },
-            
-    success: function(label) {
-        label.text('OK!').addClass('valid');}
+    tootlip_options:{
+            username: {trigger:'focus', placement:'right'},
+            password: {trigger:'focus', placement:'right'},
+            repassword: {trigger: 'focus', placement:'right'},
+            ign: {trigger: 'focus', placement:'right'}
+            }
+
+//    success: function(label) {
+//        label.text('OK!').addClass('valid');}
     });
 });

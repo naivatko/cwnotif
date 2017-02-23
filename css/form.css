@@ -1,15 +1,13 @@
 body {
-  color: #ffffff;
-  background-color: #4f5160;
+  color: #393939;
 }
 
-.error {
-  color: red;
-  font-size: 11px;
+.has-error {
+  border-color: #ff0000 !important;
 }
 
-.valid {
-  color: #49bdff;
+.help-block {
+  color: #ff3333 !important;
 }
 
 #form-box {
