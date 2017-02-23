@@ -7,3 +7,11 @@ body {
   color: red;
   font-size: 11px;
 }
+
+.valid {
+  color: #49bdff;
+}
+
+#form-box {
+  margin-top: 7.5%;
+}

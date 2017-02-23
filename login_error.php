@@ -8,14 +8,14 @@
 <!DOCTYPE html>
 <head>
 	<title>cwnotif</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/form.css">
-	<script type="text/javascript" src="javascript/jquery.min.js"></script>
-	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.js"></script>
 </head>
 <body>
 <div class="container">
-	<div class="row col-sm-3">
+	<div class="row col-sm-3" id="form-box">
 		<form method="post" action="modules/login.php">
 			<div class="form-group">
 				<label for="username">Username:</label>
