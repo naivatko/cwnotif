@@ -9,6 +9,9 @@
 <head>
 	<title>cwnotif</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">

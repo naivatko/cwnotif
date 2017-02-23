@@ -22,7 +22,7 @@ if($_SESSION['svc_status'] == 0) {
 	<head>
 	  <title>cwnotif</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	  <link href="css/dashboard.css" rel="stylesheet" type="text/css">
+	  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 		<script type="text/javascript" src="javascript/jquery.min.js"></script>
 	</head>
 <body>

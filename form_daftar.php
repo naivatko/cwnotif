@@ -11,6 +11,7 @@ if(isset($_SESSION['username'])){
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/form.css">
 	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
 	<script type="text/javascript" src="javascript/core.js"></script>
 	<script type="text/javascript" src="javascript/form.daftar.handler.js"></script>
 </head>
