@@ -45,7 +45,7 @@ $(document).ready(function() {
                   minlength:'Isikan sesuai password',
                   equalTo :'Isikan sesuai password'},
               ign: {
-                  required:'IGN tidak boleh kosong',
+                  required:'Masukkan nick WoT kamu',
                   minlength:'Masukkan minimal 3 karakter'}
               },
       tooltip_options:{
