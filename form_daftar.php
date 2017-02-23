@@ -11,13 +11,14 @@ if(isset($_SESSION['username'])){
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/form.css">
 	<script type="text/javascript" src="javascript/jquery.js"></script>
-	<script type="text/javascript" src="javascript/jquery.validate.js"></script>
 	<script type="text/javascript" src="javascript/bootstrap.js"></script>
+	<script type="text/javascript" src="javascript/jquery.validate.js"></script>
+	<script type="text/javascript" src="javascript/jquery-validate.bootstrap-tooltip.js"></script>
 	<script type="text/javascript" src="javascript/form.daftar.handler.js"></script>
 </head>
 <body>
 	<div class="container">
-		<div class="row col-sm-3" id="form-box">
+		<div class="row col-sm-6" id="form-box">
 			<form method="post" action="modules/get_data.php" id="form-daftar">
 				<div class="form-group">
 					<label for="username">Username</label>

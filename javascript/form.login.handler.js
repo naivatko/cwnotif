@@ -8,6 +8,20 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip()
   });
 
+  $.validator.setDefaults({
+    errorClass: 'help-block',
+    highlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .addClass('has-error');
+        },
+    unhighlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .removeClass('has-error');
+        }
+  });
+
   $("#form-login").validate({
     rules:{
       username:{required: true, alphanumeric: true},
@@ -18,8 +32,8 @@ $(document).ready(function(){
       password:{required:'Password tidak boleh kosong'}
     },
     tooltip_options:{
-      username:{placement:'right'},
-      password:{placement:'right'}
+      username:{placement:'top'},
+      password:{placement:'top'}
     }
   });
 });

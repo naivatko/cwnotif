@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="container">
-	<div class="row col-sm-3" id="form-box">
+	<div class="row col-sm-6" id="form-box">
 		<form method="post" action="modules/login.php" id="form-login">
 			<div class="form-group">
 				<label for="username">Username:</label>

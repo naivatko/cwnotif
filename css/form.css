@@ -2,14 +2,6 @@ body {
   color: #393939;
 }
 
-.has-error {
-  border-color: #ff0000 !important;
-}
-
-.help-block {
-  color: #ff3333 !important;
-}
-
 #form-box {
   margin-top: 7.5%;
 }
