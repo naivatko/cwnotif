@@ -11,9 +11,8 @@ if(isset($_SESSION['username'])){
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/form.css">
 	<script type="text/javascript" src="javascript/jquery.js"></script>
-	<script type="text/javascript" src="javascript/bootstrap.js"></script>
 	<script type="text/javascript" src="javascript/jquery.validate.js"></script>
-	<script type="text/javascript" src="javascript/jquery-validate.bootstrap-tooltip.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.js"></script>
 	<script type="text/javascript" src="javascript/form.daftar.handler.js"></script>
 </head>
 <body>

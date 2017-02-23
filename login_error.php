@@ -12,11 +12,14 @@
 	<link rel="stylesheet" type="text/css" href="css/form.css">
 	<script type="text/javascript" src="javascript/jquery.js"></script>
 	<script type="text/javascript" src="javascript/bootstrap.js"></script>
+	<script type="text/javascript" src="javascript/jquery.validate.js"></script>
+	<script type="text/javascript" src="javascript/jquery-validate.bootstrap-tooltip.js"></script>
+	<script type="text/javascript" src="javascript/form.login.handler.js"></script>
 </head>
 <body>
 <div class="container">
 	<div class="row col-sm-3" id="form-box">
-		<form method="post" action="modules/login.php">
+		<form method="post" action="modules/login.php" id="form-login">
 			<div class="form-group">
 				<label for="username">Username:</label>
 				<input type="text" class="form-control" id="username" placeholder="Username cwnotif" name="username" maxlength="10">
