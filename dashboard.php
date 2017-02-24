@@ -28,11 +28,18 @@ if($_SESSION['svc_status'] == 0) {
 	</head>
 <body>
 <header class="row">
-	<div class="col-sm-1" id="logout">
-	<a href="modules/logout.php" class="btn btn-default btn-block" id="">
-	  <span class="glyphicon glyphicon-log-out"></span> Log out
-	</a>
-</div>
+	<div class="container" id="main-header-div">
+		<div id="welcome" class="row col-sm-4">
+			<h5><b>
+				Selamat Datang! <?php echo $username ?>
+			</b></h5>
+		</div>
+		<div class="" id="logout">
+			<a href="modules/logout.php" class="btn btn-default" id="logout-link">
+		  	<span class="glyphicon glyphicon-log-out"></span> Log out
+			</a>
+		</div>
+	</div>
 </header>
 </body>
 </html>

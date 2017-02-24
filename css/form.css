@@ -1,7 +1,19 @@
 body {
-  color: #393939;
+  background-color: #2e3849;
+}
+
+label {
+  color: white;
 }
 
 #form-box {
   margin-top: 7.5%;
+}
+
+.alert-warning {
+  border-radius: 4px;
+}
+
+#error-message {
+  margin-top: 5px;
 }
