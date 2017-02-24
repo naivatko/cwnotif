@@ -8,13 +8,13 @@
 <!DOCTYPE html>
 <head>
 	<title>cwnotif</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/form.css">
 	<script type="text/javascript" src="javascript/jquery.js"></script>
 	<script type="text/javascript" src="javascript/bootstrap.js"></script>
 	<script type="text/javascript" src="javascript/jquery.validate.js"></script>
 	<script type="text/javascript" src="javascript/jquery-validate.bootstrap-tooltip.js"></script>
 	<script type="text/javascript" src="javascript/form.login.handler.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
 </head>
 <body>
 <div class="container">
@@ -31,7 +31,7 @@
 			<button type="submit" class="btn btn-default btn-block" name="submit">Login</button>
 			<a href="form_daftar.php" class="btn btn-default btn-block" id="ke-form-daftar">Daftar</a>
 		</form>
-		<p class="error text-center" id="error-message">username atau password yang anda masukkan salah atau belum terdaftar<p>
+		<p class="alert-warning text-center" id="error-message">username atau password yang anda masukkan salah atau belum terdaftar<p>
 	</div>
 </div>
 </body>

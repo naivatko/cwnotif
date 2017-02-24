@@ -21,17 +21,18 @@ if($_SESSION['svc_status'] == 0) {
 <html>
 	<head>
 	  <title>cwnotif</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 		<script type="text/javascript" src="javascript/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 	</head>
 <body>
-<header>
-	<nav id="nav-all">
-		<h1 id="welcome" class="row col-sm-6 vertical-align">Selamat Datang! <?php echo $username; ?></h1>
-		<a href="modules/logout.php" id="logout" class="btn btn-default">Logout</a>
-	</nav>
+<header class="row">
+	<div class="col-sm-1" id="logout">
+	<a href="modules/logout.php" class="btn btn-default btn-block" id="">
+	  <span class="glyphicon glyphicon-log-out"></span> Log out
+	</a>
+</div>
 </header>
-
 </body>
 </html>
