@@ -7,11 +7,71 @@ header {
   padding: 1em 0;
 }
 
-#welcome h5 {
+#navbar {
+
+}
+
+#navbar-main {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#navbar-left, #navbar-right {
+  vertical-align: middle;
+  color: white;
+}
+
+#navbar-left {
+
+}
+
+#welcome {
   color: white;
   vertical-align: middle;
+  font-size: 200%;
+}
+
+#navbar-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
 }
 
 #logout {
-  float: right;
+  position: absolute;
+  top:50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+#main {
+  padding: 0;
+  margin: auto;
+  margin-top: 8em;
+  background-color:;
+  color: white;
+}
+
+.box-group {
+  padding: 0;
+}
+
+#box1, #box2 {
+  margin-right: 0.5em;
+}
+
+#box3, #box4 {
+  margin-left: 0.5em;
+}
+
+.boxes {
+  text-align: center;
+  margin: 1em;
+  height: 10em;
+  background-color: #2a3242;
+}
+
+#nickname {
+
 }
