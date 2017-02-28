@@ -31,7 +31,7 @@ if($_SESSION['svc_status'] == 0) {
 	<div class="container" id="navbar">
 		<div class="row" id="navbar-main">
 			<div class="col-sm-6 col-xs-6" id="navbar-left">
-				<div id="welcome"><b>Selamat Datang! <?php echo $username; ?></b></div>
+				<div id="welcome"><b>Welcome! <?php echo $username; ?></b></div>
 			</div>
 			<div class="col-sm-6 col-xs-6" id="navbar-right">
 				<div id="logout">
@@ -48,14 +48,32 @@ if($_SESSION['svc_status'] == 0) {
 <div class="container row" id="main">
 	<div class="box-group col-sm-6" id="box-group-kiri">
 		<div class="boxes" id="box1">
-			<div>Nickname</div>
-			<div id="nickname"><?php echo $nickname; ?></div>
+			<div class="" style="background-color: #566481;">Nickname</div>
+			<div class="box-content" id="box1-content">
+				<div class="userdata" id="nickname"><b><?php echo $nickname; ?></b></div>
+			</div>
 		</div>
-		<div class="boxes" id="box2">BOX 2</div>
+		<div class="boxes" id="box2">
+			<div class="" style="background-color: #566481;">Clan</div>
+			<div class="box-content" id="box2-content">
+				<div class="userdata" id="clan"><b><?php echo $clan; ?></b></div>
+			</div>
+		</div>
 	</div>
 	<div class="box-group col-sm-6" id="box-group-kanan">
-		<div class="boxes" id="box3">BOX 3</div>
-		<div class="boxes" id="box4">BOX 4</div>
+		<div class="boxes" id="box3">
+			<div class="" style="background-color: #566481;">BOX 3</div>
+			<div class="box-content" id="box3-content">
+				<div class="userdata" id="clan"><b><?php ; ?></b></div>
+			</div>
+		</div>
+		<div class="boxes" id="box4">
+			<div class="" style="background-color: #566481;">Service Status</div>
+			<div class="box-content" id="box4-content">
+				<div class="userdata" id="clan"><b><?php echo $svc_status; ?></b></div>
+			</div>
+		</div>
 	</div>
+</div>
 </body>
 </html>

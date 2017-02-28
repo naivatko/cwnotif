@@ -66,12 +66,20 @@ header {
 }
 
 .boxes {
+  position: relative;
   text-align: center;
   margin: 1em;
   height: 10em;
   background-color: #2a3242;
 }
 
-#nickname {
+.box-content {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateY(-50%) translateX(-50%);
+}
 
+.userdata {
+  font-size: 250%;
 }
