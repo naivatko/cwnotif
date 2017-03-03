@@ -18,20 +18,22 @@
 </head>
 <body>
 <div class="container">
-	<div class="row col-sm-3" id="form-box">
-		<form method="post" action="modules/login.php" id="form-login">
-			<div class="form-group">
-				<label for="username">Username:</label>
-				<input type="text" class="form-control" id="username" placeholder="Username cwnotif" name="username" maxlength="10">
-			</div>
-			<div class="form-group">
-				<label for="password">Password:</label>
-				<input type="password" class="form-control" id="password" placeholder="********" name="password" maxlength="10">
-			</div>
-			<button type="submit" class="btn btn-default btn-block" name="submit">Login</button>
-			<a href="form_daftar.php" class="btn btn-default btn-block" id="ke-form-daftar">Daftar</a>
-		</form>
-		<p class="alert-warning text-center" id="error-message">username atau password yang anda masukkan salah atau belum terdaftar<p>
+	<div class="row">
+		<div class="col-sm-4 col-xs-6" id="form-box">
+			<form method="post" action="modules/login.php" id="form-login">
+				<div class="form-group">
+					<label for="username">Username:</label>
+					<input type="text" class="form-control" id="username" placeholder="Username cwnotif" name="username" maxlength="10">
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input type="password" class="form-control" id="password" placeholder="********" name="password" maxlength="10">
+				</div>
+				<button type="submit" class="btn btn-default btn-block" name="submit">Login</button>
+				<a href="form_daftar.php" class="btn btn-default btn-block" id="ke-form-daftar">Daftar</a>
+			</form>
+			<p class="alert-warning text-center" id="error-message">username atau password yang anda masukkan salah atau belum terdaftar<p>
+		</div>
 	</div>
 </div>
 </body>

@@ -45,10 +45,14 @@ header {
   transform: translateY(-50%);
 }
 
+#logout-button {
+  border-radius: 0;
+}
+
 #main {
   padding: 0;
   margin: auto;
-  margin-top: 8em;
+  margin-top: 6em;
   background-color:;
   color: white;
 }
@@ -71,6 +75,7 @@ header {
   margin: 1em;
   height: 10em;
   background-color: #2a3242;
+  box-shadow: 0px 0px 10px #2b2b2b;
 }
 
 .box-content {
@@ -83,3 +88,20 @@ header {
 .userdata {
   font-size: 250%;
 }
+
+#svc-status {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+#svc-status-switch {
+  width: 5em;
+  background-color: red;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }

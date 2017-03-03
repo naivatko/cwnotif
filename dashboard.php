@@ -36,7 +36,7 @@ if($_SESSION['svc_status'] == 0) {
 			<div class="col-sm-6 col-xs-6" id="navbar-right">
 				<div id="logout">
 					<a href="modules/logout.php">
-						<button type="button" class="btn btn-default btn-sm">
+						<button type="button" class="btn btn-default btn-sm" id="logout-button">
 	          	<span class="glyphicon glyphicon-log-out" style="color: #2a3242;"></span><b style="color: #2a3242;"> Log out</b>
 	        	</button>
 					</a>
@@ -64,13 +64,17 @@ if($_SESSION['svc_status'] == 0) {
 		<div class="boxes" id="box3">
 			<div class="" style="background-color: #566481;">BOX 3</div>
 			<div class="box-content" id="box3-content">
-				<div class="userdata" id="clan"><b><?php ; ?></b></div>
+				<div class="userdata" id="box4"><b><?php ; ?></b></div>
 			</div>
 		</div>
 		<div class="boxes" id="box4">
 			<div class="" style="background-color: #566481;">Service Status</div>
 			<div class="box-content" id="box4-content">
-				<div class="userdata" id="clan"><b><?php echo $svc_status; ?></b></div>
+				<div id=svc-status>
+					<div class="userdata" id="svc-status-off"><b>OFF</b></div>
+					<div id="svc-status-switch"></div>
+					<div class="userdata" id="svc-status-on"><b>ON</b></div>
+			</div>
 			</div>
 		</div>
 	</div>
