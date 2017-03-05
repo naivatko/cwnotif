@@ -8,12 +8,7 @@ if(empty($_SESSION['username'])){
 $username 	= $_SESSION['username'];
 $clan				=	$_SESSION['clan'];
 $nickname		=	$_SESSION['nickname'];
-
-if($_SESSION['svc_status'] == 0) {
-							$svc_status = "OFF";
-							} else {
-							$svc_status = "ON";
-							}
+$svc_status = $_SESSION['svc_status'];
 
 ?>
 
@@ -21,10 +16,10 @@ if($_SESSION['svc_status'] == 0) {
 <html>
 	<head>
 	  <title>cwnotif</title>
-		<script type="text/javascript" src="javascript/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript/jquery.js"></script>
 		<script type="text/javascript" src="javascript/bootstrap.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
 	</head>
 <body>
 <header class="container-fluid">
@@ -48,13 +43,13 @@ if($_SESSION['svc_status'] == 0) {
 <div class="container row" id="main">
 	<div class="box-group col-sm-6" id="box-group-kiri">
 		<div class="boxes" id="box1">
-			<div class="" style="background-color: #566481;">Nickname</div>
+			<div class="box-head">Nickname</div>
 			<div class="box-content" id="box1-content">
 				<div class="userdata" id="nickname"><b><?php echo $nickname; ?></b></div>
 			</div>
 		</div>
 		<div class="boxes" id="box2">
-			<div class="" style="background-color: #566481;">Clan</div>
+			<div class="box-head">Clan</div>
 			<div class="box-content" id="box2-content">
 				<div class="userdata" id="clan"><b><?php echo $clan; ?></b></div>
 			</div>
@@ -62,19 +57,25 @@ if($_SESSION['svc_status'] == 0) {
 	</div>
 	<div class="box-group col-sm-6" id="box-group-kanan">
 		<div class="boxes" id="box3">
-			<div class="" style="background-color: #566481;">BOX 3</div>
+			<div class="box-head">BOX 3</div>
 			<div class="box-content" id="box3-content">
-				<div class="userdata" id="box4"><b><?php ; ?></b></div>
+				<div class="userdata" id=""><b><?php ; ?></b></div>
 			</div>
 		</div>
 		<div class="boxes" id="box4">
-			<div class="" style="background-color: #566481;">Service Status</div>
+			<div class="box-head">Service Status</div>
 			<div class="box-content" id="box4-content">
-				<div id=svc-status>
-					<div class="userdata" id="svc-status-off"><b>OFF</b></div>
-					<div id="svc-status-switch"></div>
-					<div class="userdata" id="svc-status-on"><b>ON</b></div>
-			</div>
+				<div class="userdata" id="svc_status">
+					<div id="switch-button">
+						<!-- Rounded switch -->
+						<label id="toggle-button" class="switch">
+							<div id="svc-status-off"><b>OFF</b></div>
+							<div id="svc-status-on"><b>ON</b></div>
+						  <input type="checkbox" id="svc-check">
+						  <div class="slider round"></div>
+						</label>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
