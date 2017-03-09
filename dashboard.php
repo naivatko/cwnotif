@@ -1,26 +1,22 @@
 <?php
-//include('modules/session.php');
-session_start();
-if(empty($_SESSION['username'])){
-		header("location: index.php");
-	}
-
-$username 	= $_SESSION['username'];
-$clan				=	$_SESSION['clan'];
-$nickname		=	$_SESSION['nickname'];
-$svc_status = $_SESSION['svc_status'];
-
+include("modules/session.php")
 ?>
-
 <!DOCTYPE html>
 <html>
-	<head>
-	  <title>cwnotif</title>
-		<script type="text/javascript" src="javascript/jquery.js"></script>
-		<script type="text/javascript" src="javascript/bootstrap.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-	  <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
-	</head>
+<head>
+ 	<title>cwnotif</title>
+	<script>
+		var username	 = <?php echo $username; ?>
+		var nickname	 = <?php echo $nickname; ?>
+		var clan			 = <?php echo $clan; ?>
+		var svc_status = <?php echo $svc_status; ?>
+	</script>
+	<script type="text/javascript" src="javascript/jquery.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.js"></script>
+  <script type="text/javascript" src="javascript/dashboard.handler.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+ <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+</head>
 <body>
 <header class="container-fluid">
 	<div class="container" id="navbar">
@@ -69,8 +65,8 @@ $svc_status = $_SESSION['svc_status'];
 					<div id="switch-button">
 						<!-- Rounded switch -->
 						<label id="toggle-button" class="switch">
-							<div id="svc-status-off"><b>OFF</b></div>
-							<div id="svc-status-on"><b>ON</b></div>
+							<div id="svc-status-off" class=""><b>OFF</b></div>
+							<div id="svc-status-on" class=""><b>ON</b></div>
 						  <input type="checkbox" id="svc-check">
 						  <div class="slider round"></div>
 						</label>
