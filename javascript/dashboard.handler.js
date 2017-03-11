@@ -18,16 +18,24 @@ $(document).ready(function(){
     });
   };
 
+  function updateSvc(currentSvc){
+    $.post(
+      "modules/update_svc_status.php",
+      {'svc_status':currentSvc},
+      function(data){
+        console.log("jawaban server = "+data);
+      }
+    );
+  };
+
   if(svc_status == '1'){
     $('#svc-check').prop('checked', true);
   }
 
   checkThis();
   $('#svc-check').change(function(){
-    console.log("svc status sebelum update = "+svc_status);
+    console.log("sebelum update = "+svc_status);
     checkThis();
-    $.post("modules/update_svc_status.php",{svc_status:svc_status},function(data){
-      console.log("jawaban server "+data);
+    updateSvc(svc_status);
     });
-  });
 });

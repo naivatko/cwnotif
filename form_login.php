@@ -24,7 +24,7 @@
 			<form method="post" action="modules/login.php" id="form-login">
 				<div class="form-group">
 					<label for="username">Username:</label>
-					<input type="text" class="form-control" id="username" placeholder="Username cwnotif" name="username" maxlength="10">
+					<input type="text" autofocus class="form-control" id="username" placeholder="Username cwnotif" name="username" maxlength="10">
 				</div>
 				<div class="form-group">
 					<label for="password">Password:</label>

@@ -1,6 +1,4 @@
 <?php
-  include("connect.php");
-  session_start();
 
   $query = "SELECT svc_status FROM tbl_user WHERE user_name = '$username'";
   $svc_status_query       = mysqli_query($db_connect, $query);

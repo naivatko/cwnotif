@@ -6,10 +6,10 @@ include("modules/session.php")
 <head>
  	<title>cwnotif</title>
 	<script>
-		var username	 = "<?php echo $username; ?>";
-		var nickname	 = "<?php echo $nickname; ?>";
-		var clan			 = "<?php echo $clan; ?>";
-		var svc_status = "<?php echo $svc_status; ?>";
+		var username	 = "<?php echo $_SESSION['username']; ?>";
+		var nickname	 = "<?php echo $_SESSION['nickname']; ?>";
+		var clan			 = "<?php echo $_SESSION['clan']; ?>";
+		var svc_status = "<?php echo $_SESSION['svc_status']; ?>";
 	</script>
 	<script type="text/javascript" src="javascript/jquery.js"></script>
 	<script type="text/javascript" src="javascript/bootstrap.js"></script>

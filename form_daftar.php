@@ -23,7 +23,7 @@ if(isset($_SESSION['username'])){
 				<form method="post" action="modules/get_data.php" id="form-daftar">
 					<div class="form-group">
 						<label for="username">Username</label>
-						<input class="form-control" type="text" name="username" placeholder="username cwnotif" maxlength="10" id="username">
+						<input class="form-control" type="text" autofocus name="username" placeholder="username cwnotif" maxlength="10" id="username">
 					</div>
 					<div class="form-group">
 						<label for="password">Password:</label>
