@@ -21,7 +21,7 @@ $(document).ready(function(){
   function updateSvc(currentSvc){
     $.post(
       "modules/update_svc_status.php",
-      {'svc_status':currentSvc},
+      {svc_status:currentSvc},
       function(data){
         console.log("jawaban server = "+data);
       }

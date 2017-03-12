@@ -4,11 +4,11 @@
 
   $svc_status         = $_POST['svc_status'];
 
-  if($svc_status == '1'){
+  /*if($svc_status == '1'){
     $svc_status = 1;
   } else {
     $svc_status = 0;
-  }
+  }*/
 
   $query = "UPDATE tbl_user
             SET svc_status = '$svc_status'
