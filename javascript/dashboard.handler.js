@@ -4,11 +4,11 @@ $(document).ready(function(){
     if($('#svc-check').prop('checked')){
       $('#svc-status-off').hide();
       $('#svc-status-on').show();
-      svc_status = '1';
+      svc_status = 1;
     } else {
       $('#svc-status-on').hide();
       $('#svc-status-off').show();
-      svc_status = '0';
+      svc_status = 0;
     }
   };
 
@@ -28,7 +28,7 @@ $(document).ready(function(){
     );
   };
 
-  if(svc_status == '1'){
+  if(svc_status == 1){
     $('#svc-check').prop('checked', true);
   }
 

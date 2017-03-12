@@ -18,5 +18,7 @@
   if($update_svc_status){
     $_SESSION['svc_status'] = $svc_status;
     echo $_SESSION['svc_status'];
+  } else {
+    echo $_SESSION['svc_status'];
   }
 ?>
