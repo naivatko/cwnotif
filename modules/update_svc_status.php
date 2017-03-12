@@ -2,7 +2,7 @@
   include("connect.php");
   include("session.php");
 
-  $svc_status         = $_POST['svc_status'];
+  $svc_status = $_POST['svc_status'];
 
   /*if($svc_status == '1'){
     $svc_status = 1;
