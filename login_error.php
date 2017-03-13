@@ -20,7 +20,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-4 col-xs-6" id="form-box">
-			<form method="post" action="modules/login.php" id="form-login">
+			<form method="post" action="modules/login_attempt.php" id="form-login">
 				<div class="form-group">
 					<label for="username">Username:</label>
 					<input type="text" class="form-control" id="username" placeholder="Username cwnotif" name="username" maxlength="10">

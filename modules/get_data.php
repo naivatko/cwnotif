@@ -7,8 +7,11 @@
 
 	$api_account = json_decode(file_get_contents($account.$ign),true); //ambil data ign
 
+	if($api_account["status"] == "ok"){
 
-	if($api_account["status"] == "ok"){ //cek jawaban dari WG API. jika status ok, lakukan proses selanjutnya. jika terdapat lebih dari 1 data, maka data yang diambil adalah data pertama)
+		//cek jawaban dari WG API.
+		//jika status ok, lakukan proses selanjutnya.
+		//jika terdapat lebih dari 1 data, maka data yang diambil adalah data pertama
 		$account_id 				= $api_account["data"][0]["account_id"];
 		$nickname						=	$api_account["data"][0]["nickname"];
 		$api_account_detail	= json_decode(file_get_contents($account_detail.$account_id."&fields=clan_id"),true); //ambil data clan
@@ -24,7 +27,7 @@
 		$clan_id			= stripslashes($clan_id);
 		$tag					=	stripslashes($tag);
 
-		include("connect.php");
+		include_once("connect.php");
 
 		$username			= mysqli_real_escape_string($db_connect, $username);//mencegah MySQL injection
 		$password			= mysqli_real_escape_string($db_connect, $password);
@@ -43,40 +46,16 @@
 			$_SESSION['error'] = mysqli_error($db_connect);
 			mysqli_close($db_connect);
 			header("location: ../daftar_error.php");
+
 		} else { //jika berhasil -> cek username
-			session_start();
 			$query								= "INSERT IGNORE INTO tbl_nickname (ign_id, nickname) VALUES ('$account_id', '$nickname')";
 			$insert_tbl_nickname	= mysqli_query($db_connect, $query);
 			$query								= "INSERT IGNORE INTO tbl_clan (clan_id, clan) VALUES ('$clan_id', '$tag')";
 			$insert_tbl_clan			= mysqli_query($db_connect, $query);
-
-			$query		= mysqli_query($db_connect, "SELECT user_name, user_pass, nickname, clan, svc_status
-																						FROM tbl_user
-																						JOIN tbl_nickname ON tbl_user.ign_id = tbl_nickname.ign_id
-																						JOIN tbl_clan ON tbl_user.clan_id = tbl_clan.clan_id
-																						WHERE user_name = '$username'");
-			$userdata	= mysqli_fetch_assoc($query);
-			$hash			= $userdata['user_pass'];
-
-			if (password_verify($password, $hash)) { //verifikasi password -> buat session -> ke dashboard
-				$_SESSION['username'] 	= $userdata['user_name'];
-				$_SESSION['nickname']		= $userdata['nickname'];
-				$_SESSION['clan']				= $userdata['clan'];
-				$_SESSION['no_hp']			=	$userdata['no_hp'];
-				$_SESSION['svc_status']	=	$userdata['svc_status'];
-
-				mysqli_close();
-				header("location: ../dashboard.php"); // Mengarahkan ke dashboard
-			} else { //jika verifikasi gagal -> ke halamam error
-				$_SESSION['errno']	= mysqli_errno($db_connect);
-				$_SESSION['error']	= mysqli_error($db_connect);
-
-				mysqli_close();
-				header("location: ../daftar_error.php");
-			}
-    }
-	} else { //jika terdapat >1 atau <1 data -> ke halaman error
+			require('login.php');
+		}
+	} else {
+		//jika tidak ada jawaban dari server WG
 		header("location: ../form_daftar.php");
 	}
-
 ?>
