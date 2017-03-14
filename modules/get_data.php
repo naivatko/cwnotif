@@ -4,6 +4,7 @@
 	$username	= $_POST['username'];
 	$password	= $_POST['password'];
 	$ign			= $_POST['ign'];
+	$no_hp		= $_POST['no_hp'];
 
 	$api_account = json_decode(file_get_contents($account.$ign),true); //ambil data ign
 
@@ -25,6 +26,7 @@
 		$account_id		= stripslashes($account_id);
 		$nickname			= stripslashes($nickname);
 		$clan_id			= stripslashes($clan_id);
+		$no_hp				= stripslashes($no_hp);
 		$tag					=	stripslashes($tag);
 
 		include_once("connect.php");
@@ -34,10 +36,11 @@
 		$account_id		= mysqli_real_escape_string($db_connect, $account_id);
 		$nickname			= mysqli_real_escape_string($db_connect, $nickname);
 		$clan_id			= mysqli_real_escape_string($db_connect, $clan_id);
+		$no_hp				= mysqli_real_escape_string($db_connect, $no_hp);
 		$tag					= mysqli_real_escape_string($db_connect, $tag);
 
 		$hash					= password_hash($password, PASSWORD_DEFAULT);//hash password
-		$query				= "INSERT INTO tbl_user (user_name, user_pass, no_hp, ign_id, clan_id) VALUES ('$username', '$hash', '', '$account_id', '$clan_id')";
+		$query				= "INSERT INTO tbl_user (user_name, user_pass, no_hp, ign_id, clan_id) VALUES ('$username', '$hash', '$no_hp', '$account_id', '$clan_id')";
 		$insert_data	= mysqli_query($db_connect, $query);
 
 		if(!$insert_data){ //jika insert data gagal -> ke halaman error

@@ -28,9 +28,23 @@ $(document).ready(function(){
     );
   };
 
+  $(function(){
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
   if(svc_status == 1){
     $('#svc-check').prop('checked', true);
   }
+
+  $(function(){
+    if(no_hp == ''){
+      $('#svc-check').prop('disabled', true);
+      $('#toggle-button').tooltip({
+        placement:'top',
+        title:'Anda belum memasukkan nomor HP anda, silakan ke halaman edit'
+      });
+    }
+  });
 
   checkThis();
   $('#svc-check').change(function(){

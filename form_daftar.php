@@ -35,7 +35,11 @@ if(isset($_SESSION['username'])){
 					</div>
 					<div class="form-group">
 						<label for="ign">IGN</label>
-						<input class="form-control" type="text" name="ign" placeholder="IGN" class="required" maxlength="24" id="ign">
+						<input class="form-control" type="text" name="ign" placeholder="IGN" maxlength="24" id="ign">
+					</div>
+					<div class="form-group">
+						<label for="no_hp">Nomor HP(Opsional)</label>
+						<input class="form-control" type="text" name="no_hp" placeholder="Nomor HP" maxlength="20" id="no_hp">
 					</div>
 					<button type="submit" name="submit" id="button" class="btn btn-default btn-block">Daftar</button>
 					<a href="form_login.php" class="btn btn-default btn-block">Ke Halaman Login</a>

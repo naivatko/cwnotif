@@ -4,10 +4,6 @@ $(document).ready(function(){
     return this.optional(element) || /^[a-z0-9]+$/i.test(value);
   }, "Hanya boleh huruf atau angka saja");
 
-  $.validator.addMethod("numeric", function(value, element){
-    return this.optional(element) || /^[0-9]+$/i.test(value);
-  }, "Isikan nomor HP anda dengan benar");
-
   $(function(){
     $('[data-toggle="tooltip"]').tooltip()
   });

@@ -7,5 +7,6 @@ if(empty($_SESSION['username'])){
 $username 	= $_SESSION['username'];
 $clan				=	$_SESSION['clan'];
 $nickname		=	$_SESSION['nickname'];
+$no_hp			= $_SESSION['no_hp'];
 $svc_status = $_SESSION['svc_status'];
 ?>

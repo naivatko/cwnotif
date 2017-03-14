@@ -18,8 +18,13 @@ label {
   margin-top: 5px;
 }
 
+.tooltip-inner {
+    min-width: 18em;
+}
+
 @media only screen and (max-width: 380px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
     }
+}

@@ -9,13 +9,14 @@ include("modules/session.php")
 		var username	 = "<?php echo $_SESSION['username']; ?>";
 		var nickname	 = "<?php echo $_SESSION['nickname']; ?>";
 		var clan			 = "<?php echo $_SESSION['clan']; ?>";
+    var no_hp      = "<?php echo $_SESSION['no_hp']; ?>";
 		var svc_status = "<?php echo $_SESSION['svc_status']; ?>";
 	</script>
 	<script type="text/javascript" src="javascript/jquery.js"></script>
 	<script type="text/javascript" src="javascript/bootstrap.js"></script>
   <script type="text/javascript" src="javascript/dashboard.handler.js"></script>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
- <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+  <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
 </head>
 <body>
 <header class="container-fluid">
@@ -68,7 +69,7 @@ include("modules/session.php")
 							<div id="svc-status-off" class=""><b>OFF</b></div>
 							<div id="svc-status-on" class=""><b>ON</b></div>
 						  <input type="checkbox" id="svc-check">
-						  <div class="slider round"></div>
+						  <div id='lingkaran' class="slider round"></div>
 						</label>
 					</div>
 				</div>
