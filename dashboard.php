@@ -19,23 +19,25 @@ include("modules/session.php")
   <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
 </head>
 <body>
-<header class="container-fluid">
-	<div class="container" id="navbar">
-		<div class="row" id="navbar-main">
-			<div class="col-sm-6 col-xs-6" id="navbar-left">
-				<div id="welcome"><b>Welcome! <?php echo $username; ?></b></div>
-			</div>
-			<div class="col-sm-6 col-xs-6" id="navbar-right">
-				<div id="logout">
-					<a href="modules/logout.php">
-						<button type="button" class="btn btn-default btn-sm" id="logout-button">
-	          	<span class="glyphicon glyphicon-log-out" style="color: #2a3242;"></span><b style="color: #2a3242;"> Log out</b>
-	        	</button>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<header class="">
+  <div class="container" style="height:100%;">
+    <div id="navbar" class="row">
+      <div id="navbar-left" class="col-sm-6 col-xs-6">
+
+      </div>
+      <div id="navbar-right" class="col-sm-6 col-xs-6 dropdown">
+        <div id="menu-icon" type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+          <div class="stripes" id="strip-top"></div>
+          <div class="stripes" id="strip-mid"></div>
+          <div class="stripes" id="strip-bottom"></div>
+        </div>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu-icon" id="menu-list">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="form_edit.php">Edit</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="modules/logout.php">Logout <span class="glyphicon">&#xe163;</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </header>
 <div class="container row" id="main">
 	<div class="box-group col-sm-6" id="box-group-kiri">

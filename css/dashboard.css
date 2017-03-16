@@ -3,57 +3,76 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
   background-color: #2a3242;
-  padding: 1em 0;
+  width: 100%;
+  height: 4em;
 }
 
 #navbar {
-
-}
-
-#navbar-main {
   height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-#navbar-left, #navbar-right {
-  vertical-align: middle;
-  color: white;
 }
 
 #navbar-left {
-
-}
-
-#welcome {
   color: white;
-  vertical-align: middle;
-  font-size: 200%;
 }
 
-#navbar-right {
-  position: absolute;
-  right: 0;
+#navbar-left, #navbar-right {
+  width: 50%;
   height: 100%;
+  position: relative;
 }
 
-#logout {
-  position: absolute;
-  top:50%;
-  right: 15px;
-  transform: translateY(-50%);
-}
-
-#logout-button {
+#menu-icon {
+  float: right;
+  width: 4em;
+  height: 100%;
+  background-color: #2a3242;
+  padding: 0.5em;
   border-radius: 0;
+}
+
+#menu-icon:hover {
+  background-color: #566481;
+}
+
+.stripes {
+  background-color: white;
+  width: 80%;
+  height: 16.67%;
+  margin: auto;
+  margin-top: 8.33%;
+  margin-bottom: 16.67%;
+  border-radius: 5px;
+}
+
+#menu-list {
+  background-color: #566481;
+}
+
+#menu-list li a {
+  color: white;
+}
+
+#menu-list li a:hover {
+  background-color: #2a3242;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+.dropdown-menu-right {
+  right: 15px;
 }
 
 #main {
   padding: 0;
   margin: auto;
   margin-top: 6em;
-  background-color:;
+  background-color:#2e3849;
   color: white;
 }
 
@@ -191,3 +210,4 @@ input:checked + .slider:before {
     [class*="col-"] {
         width: 100%;
     }
+}
