@@ -32,8 +32,16 @@ include("modules/session.php")
           <div class="stripes" id="strip-bottom"></div>
         </div>
         <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu-icon" id="menu-list">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="form_edit.php">Edit</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="modules/logout.php">Logout <span class="glyphicon">&#xe163;</span></a></li>
+          <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="form_edit.php">
+              Edit
+            </a>
+          </li>
+          <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="modules/logout.php">
+              Logout <span class="glyphicon">&#xe163;</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
