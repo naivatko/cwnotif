@@ -37,7 +37,7 @@ $(document).ready(function() {
                 password:{required: true, alphanumeric: true, minlength: 5},
                 repassword:{required: true, alphanumeric: true, equalTo:"#password", minlength: 5},
                 ign:{required: true, ignRule: true, minlength: 3},
-                no_hp:{numeric: true, minlength: 8}
+                no_hp:{numeric: true, minlength: 9}
               },
         messages:{
                 username: {
@@ -51,7 +51,7 @@ $(document).ready(function() {
                     minlength:'Isikan sesuai password',
                     equalTo :'Isikan sesuai password'},
                 ign: {
-                    required:'Masukkan nick WoT kamu',
+                    required:'Masukkan nickname WoT anda',
                     minlength:'Masukkan minimal 3 karakter'},
                 no_hp: {
                     minlength:'Isikan nomor HP anda dengan benar'}

@@ -3,7 +3,8 @@
   include("session.php");
 
   $svc_status = $_POST['svc_status'];
-
+  $svc_status = stripslashes($svc_status);
+  $svc_status = mysqli_real_escape_string($db_connect, $svc_status);
   /*if($svc_status == '1'){
     $svc_status = 1;
   } else {

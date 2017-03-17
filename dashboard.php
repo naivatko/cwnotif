@@ -34,7 +34,7 @@ include("modules/session.php")
         <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu-icon" id="menu-list">
           <li role="presentation">
             <a role="menuitem" tabindex="-1" href="form_edit.php">
-              Edit
+              Edit No HP
             </a>
           </li>
           <li role="presentation">
