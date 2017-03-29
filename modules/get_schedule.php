@@ -11,15 +11,15 @@ if($result){
     $api_clan_battles = json_decode(file_get_contents($clan_battles.$row['clan_id']),true);
 
     if($api_clan_battles['status'] == 'ok' && !empty($api_clan_battles['data'])){
-      $clan   = $row['clan'];
-      $id     = $clan.$api_clan_battles['data'][0]['time'];
-      $jadwal = date('Y-m-d H:i:s', $api_clan_battles['data'][0]['time']);
-      $query  = "INSERT IGNORE INTO tbl_jadwal (id, clan, jadwal)
-                 VALUES ('$id', '$clan', '$jadwal')";
+
+      $clan_id   = $row['clan_id'];
+      $jadwal    = date('Y-m-d H:i:s', $api_clan_battles['data'][0]['time']);
+      $id_jadwal = $clan_id."-".$api_clan_battles['data'][0]['time'];
+
+      $query     = "INSERT IGNORE INTO tbl_jadwal (id_jadwal, clan_id, jadwal)
+                    VALUES ('$id_jadwal', '$clan_id', '$jadwal')";
 
       $insert_jadwal = mysqli_query($db_connect, $query);
-      echo $clan." ".$jadwal;
-      echo "<br>";
     }
   }
 }
