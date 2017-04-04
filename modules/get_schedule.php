@@ -3,7 +3,8 @@
 include_once("connect.php");
 include_once("api.php");
 
-$query          = "SELECT clan_id, clan FROM tbl_clan";
+$query          = "SELECT clan_id
+                   FROM tbl_clan";
 $result         = mysqli_query($db_connect, $query);
 
 if($result){
@@ -23,5 +24,4 @@ if($result){
     }
   }
 }
-
 ?>

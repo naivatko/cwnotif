@@ -40,7 +40,8 @@
 		$tag					= mysqli_real_escape_string($db_connect, $tag);
 
 		$hash					= password_hash($password, PASSWORD_DEFAULT);//hash password
-		$query				= "INSERT INTO tbl_user (user_name, user_pass, no_hp, ign_id, clan_id) VALUES ('$username', '$hash', '$no_hp', '$account_id', '$clan_id')";
+		$query				= "INSERT INTO tbl_user (user_name, user_pass, no_hp, ign_id, clan_id)
+										 VALUES ('$username', '$hash', '$no_hp', '$account_id', '$clan_id')";
 		$insert_data	= mysqli_query($db_connect, $query);
 
 		if(!$insert_data){ //jika insert data gagal -> ke halaman error

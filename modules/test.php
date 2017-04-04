@@ -1,12 +1,14 @@
 <?php
 include_once("connect.php");
-$time = "1263172000";
-$jadwal = date('Y-m-d H:i:s', $time);
+$message = "test";
+for($i = 0; $i < 10; $i++){
+  $query1    = "INSERT INTO outbox (DestinationNumber, TextDecoded)
+                VALUES ('08561858689', '$message.$i')";
+  $send_sms1 = mysqli_query($sms_db_connect, $query1);
 
-$clan_id = "2000000123";
-$id_jadwal = $clan_id."-".$time;
+  //$query2    = "INSERT INTO outbox (DestinationNumber, TextDecoded)
+  //              VALUES ('085643178839', '$message.$i')";
+  //$send_sms2 = mysqli_query($sms_db_connect, $query2);
+}
 
-$query = "INSERT INTO tbl_jadwal (id_jadwal, clan_id, jadwal)
-          VALUES ('$id_jadwal', '$clan_id', '$jadwal')";
-$insert = mysqli_query($db_connect, $query);
 ?>
