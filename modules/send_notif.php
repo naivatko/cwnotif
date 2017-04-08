@@ -15,17 +15,17 @@ if($result_jadwal){
     $clan_id   = $row_jadwal['clan_id'];
     $clan      = $row_jadwal['clan'];
     $jadwal    = $row_jadwal['jadwal'];
-    $message   = "CLAN WAR [".$clan."] AT [".$jadwal"]";
+    $message   = "CLAN WAR [".$clan."] AT [".$jadwal."]";
 
-    $select_user = "SELECT no_hp FROM tbl_user
-                    WHERE clan_id = '$clan_id'
-                    AND svc_status = 1";
+    $select_user        = "SELECT no_hp FROM tbl_user
+                           WHERE clan_id = '$clan_id'
+                           AND svc_status = 1";
     $result_select_user = mysqli_query($db_connect, $select_user);
 
     if($result_select_user){
       while($row_user = mysqli_fetch_assoc($result_select_user)){
         $no_hp = $row['no_hp'];
-        
+
         $message_query  = "INSERT INTO outbox (DestinationNumber, TextDecoded)
                            VALUES ('$no_hp', '$message')";
         $insert_message = mysqli_query($db_connect, $message_query);
