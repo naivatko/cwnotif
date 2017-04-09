@@ -1,11 +1,12 @@
 <?php
+date_default_timezone_set("Asia/Jakarta");
 
 include_once("connect.php");
 include_once("api.php");
 
 $query          = "SELECT clan_id
-                   FROM tbl_clan
-                   WHERE clan_id <> ''";
+                   FROM tbl_clan";
+                  // WHERE clan_id <> ''";
 $result         = mysqli_query($db_connect, $query);
 
 if($result){
