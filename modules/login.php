@@ -13,7 +13,7 @@ $password = mysqli_real_escape_string($db_connect, $password);
 
 // SQL query untuk memeriksa apakah user terdapat di database?
 
-$query = mysqli_query($db_connect, "SELECT user_name, user_pass, nickname, clan, no_hp, svc_status
+$query = mysqli_query($db_connect, "SELECT user_name, user_pass, tbl_user.ign_id, nickname, clan, no_hp, svc_status
 																		FROM tbl_user
 																		JOIN tbl_nickname ON tbl_user.ign_id = tbl_nickname.ign_id
 																		JOIN tbl_clan ON tbl_user.clan_id = tbl_clan.clan_id
@@ -29,6 +29,7 @@ if (!$query) {
 	if(password_verify($password, $hash)){
 		session_start(); // Memulai Session
 		$_SESSION['username'] 	= $userdata['user_name'];
+		$_SESSION['ign_id']			= $userdata['ign_id'];
 		$_SESSION['nickname']		= $userdata['nickname'];
 		$_SESSION['clan']				= $userdata['clan'];
 		$_SESSION['no_hp']			=	$userdata['no_hp'];

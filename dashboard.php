@@ -1,16 +1,16 @@
 <?php
-include("modules/session.php")
+include("modules/player_data.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
  	<title>cwnotif</title>
 	<script>
-		var username	 = "<?php echo $_SESSION['username']; ?>";
-		var nickname	 = "<?php echo $_SESSION['nickname']; ?>";
-		var clan			 = "<?php echo $_SESSION['clan']; ?>";
-    var no_hp      = "<?php echo $_SESSION['no_hp']; ?>";
-		var svc_status = "<?php echo $_SESSION['svc_status']; ?>";
+		var username	 = "<?php echo $username ?>";
+		var nickname	 = "<?php echo $nickname ?>";
+		var clan			 = "<?php echo $clan ?>";
+    var no_hp      = "<?php echo $no_hp ?>";
+		var svc_status = "<?php echo $svc_status ?>";
 	</script>
 	<script type="text/javascript" src="javascript/jquery.js"></script>
 	<script type="text/javascript" src="javascript/bootstrap.js"></script>
@@ -23,7 +23,7 @@ include("modules/session.php")
   <div class="container" style="height:100%;">
     <div id="navbar" class="row">
       <div id="navbar-left" class="col-sm-6 col-xs-6">
-
+        <div id="welcome">Welcome <?php echo $username?></div>
       </div>
       <div id="navbar-right" class="col-sm-6 col-xs-6 dropdown">
         <div id="menu-icon" type="button" class="btn dropdown-toggle" data-toggle="dropdown">
@@ -64,9 +64,22 @@ include("modules/session.php")
 	</div>
 	<div class="box-group col-sm-6" id="box-group-kanan">
 		<div class="boxes" id="box3">
-			<div class="box-head">BOX 3</div>
+			<div class="box-head">Statistics</div>
 			<div class="box-content" id="box3-content">
-				<div class="userdata" id=""><b><?php ; ?></b></div>
+        <div id="player-stat" class="row">
+          <div class="col-sm-6" id="player-stat-left">
+            Battles Count: <b><?php echo $battles_count."<br>";?></b>
+            Win Ratio: <b><?php echo $win_ratio."<br>";?></b>
+            Hit Ratio: <b><?php echo $hit_ratio."<br>";?></b>
+            Survive Ratio: <b><?php echo $survive_ratio;?></b>
+          </div>
+          <div class="col-sm-6" id="player-stat-right">
+            Personal Rating: <b><?php echo $personal_rating."<br>";?></b>
+            Average Exp: <b><?php echo $avg_xp."<br>";?></b>
+            Average Damage: <b><?php echo $avg_damage."<br>";?></b>
+            Damage Dealt/Received: <?php echo $damage_ratio;?>
+          </div>
+        </div>
 			</div>
 		</div>
 		<div class="boxes" id="box4">

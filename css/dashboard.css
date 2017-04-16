@@ -19,6 +19,10 @@ header {
   color: white;
 }
 
+#welcome {
+  font-size: 2em;
+}
+
 #navbar-left, #navbar-right {
   width: 50%;
   height: 100%;
@@ -108,8 +112,17 @@ header {
   transform: translateY(-50%) translateX(-50%);
 }
 
+#box3-content {
+  width: 100%;
+}
+
+#player-stat {
+  display: inline;
+  font-size: 12px;
+}
+
 .userdata {
-  font-size: 250%;
+  font-size: 2.5em;
 }
 
 #svc-status {
@@ -207,7 +220,19 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  #welcome {
+    font-size: 1.2em;
+  }
+
+  .userdata {
+    font-size: 1.2em;
+  }
+
 }

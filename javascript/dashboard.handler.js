@@ -32,8 +32,16 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip()
   });
 
+  if(no_hp == ""){
+    svc_status = 0;
+  }
+
   if(svc_status == 1){
     $('#svc-check').prop('checked', true);
+    updateSvc(svc_status);
+  } else {
+    $('#svc-check').prop('checked', false);
+    updateSvc(svc_status);
   }
 
   $(function(){
