@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function(){
 
   $.validator.addMethod("alphanumeric", function(value, element) {
             return this.optional(element) || /^[a-z0-9]+$/i.test(value);
